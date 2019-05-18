@@ -55,9 +55,9 @@ public class Main {
         parser.addArgument("-c")
                 .dest("md5ignore")
                 .required(false)
-                .setConst(true)
-                .setDefault(false)
-                .help("Don't check MD5 checksum between firmware file and JSON file");
+                .type(String.class)
+                .setDefault("")
+                .help("Don't check MD5 checksum between firmware file and JSON file. Make sure you know what you are doing.");
 
         parser.addArgument("-o")
                 .dest("outputfile")
@@ -87,7 +87,7 @@ public class Main {
         Path fwfolder = Paths.get(res.getString("fwfolder"));
         List<String> updatetypes = res.get("firmwaretypes");
         Path outputfile = Paths.get(res.getString("outputfile"));
-        boolean md5ignore = res.getBoolean("md5ignore");
+        boolean md5ignore = res.getString("md5ignore").equalsIgnoreCase("MD5IGNORE");
 
 
         if(!Files.isDirectory(fwfolder)){
