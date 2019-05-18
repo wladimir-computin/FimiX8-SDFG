@@ -34,7 +34,7 @@ public class Main {
                 .type(String.class)
                 .metavar("<path/to/folder>")
                 .setDefault("fw-download")
-                .help("Path to the firmware directory. Omit to download firmware files automatically from the urls provided by the firmware JSON file.");
+                .help("Path to the firmware directory.\nOmit: download firmware files automatically from the urls provided by the firmware JSON file.");
 
         parser.addArgument("-i")
                 .dest("jsonfile")
@@ -42,7 +42,7 @@ public class Main {
                 .type(String.class)
                 .metavar("<path/to/file.json>")
                 .setDefault("")
-                .help("Path to the firmware JSON file. Pass \"auto\" to download it automatically from FIMIs firmware server. Omit to search for *.json in <firmware folder>.");
+                .help("Path to the firmware JSON file.\nPass \"auto\": download it automatically from FIMIs firmware server.\nOmit: search for *.json in <firmware folder>.");
 
         parser.addArgument("-u")
                 .dest("firmwaretypes")
