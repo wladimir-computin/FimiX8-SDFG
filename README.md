@@ -1,17 +1,23 @@
 # Fimi X8 SE SDFG
 ### Generate sd-card-flashable fr_firmware.bin images for Fimi X8 SE
 
+## About SD-Card flashing
+TODO
+
+## Tutorial
+TODO
+
 ## Usage
 ### Arguments
 ```
   -h, --help             show this help message and exit
   -f <path/to/folder>    Path to the firmware directory.
-			 Omit to download  firmware  files  automatically  from the urls provided by the firmware
-                         JSON file.
+			 Omit: download firmware files automatically from the urls provided by the firmware
+	                 JSON file.
   -i <path/to/file.json>
                          Path to the firmware JSON file.
-                         Pass "auto" to download  it automatically from FIMIs firmware server.
-                         Omit to search for *.json in <firmware folder>.
+                         Pass "auto": download it automatically from FIMIs firmware server.
+                         Omit: search for *.json in <firmware folder>.
   -u {rc,rc_relay,fc,fc_relay,esc,gimbal,camera,nfz,ota} [...]
                          The firmware types to include in fr_firmware.bin.
                          One or more types separated with space.
@@ -36,5 +42,3 @@ Stuff will be placed in fw-download folder by default, no firmware is generated:
 
 The current firmware files are listed by the backend API here:
 https://fimiapp-server-frankfurt.mi-ae.com.de/v3/firmware/getFirmwareDetail
-
-
