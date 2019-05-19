@@ -104,6 +104,7 @@ Not needed, you just need the Java (8 or greater) runtime installed. After cloni
 ### Examples
  * Download JSON firmware file, parse it and download all current firmware images for the Fimi X8 SE.
 Stuff will be placed in fw-download folder by default, no firmware is generated:
+
   ``java -jar X8UpdateGenerator-1.0.jar -i auto``
 
 * Download JSON firmware file, parse it and download the current Gimbal firmware image. Then generate the fr_firmware.bin file for the Gimbal:
