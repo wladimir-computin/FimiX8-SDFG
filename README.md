@@ -30,7 +30,7 @@ So I reverse engineered the firmware files and Fimi Navi APK, found how to flash
  1. Download firmware JSON file. (automatic, if flashing latest available version)
  2. Download needed firmware images from directly FIMIs server or from my github repo. (automatic, if flashing latest available version)
  3. Generate the update package with this tool.
- 4. Place the update package as ``fr_firmware.bin`` and restart the drone. From now on it's like updating from the app, but skipping steps 0 to 8.
+ 4. Place the update package as ``fr_firmware.bin`` on the root of the sd-card and restart the drone. From now on it's like updating from the app, but skipping steps 0 to 8.
  
 ### Flashing multiple firmware at once
 FIMI designed the updater so it can flash multiple firmware at once if they are packed into one ``fr_firmware.bin`` file. You can also flash every firmware one by one. I don't know if there are cases when the update will fail because we do it one by one and in the wrong order. I flashed my firmware one by one, so if it fails I know why. The order was: FC, Gimbal, ESC, FC-Relay, OTA, RC-Relay, RC, Camera. But some of the firmware was already updated, so I don't know if this approach is optimal in every case. The tool can generate a fr_firmware.bin file containing one or multiple firmwares, so you have the choice :)
