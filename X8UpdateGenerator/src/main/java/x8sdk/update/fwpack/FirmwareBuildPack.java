@@ -5,6 +5,7 @@ import x8sdk.update.ByteArrayToIntArray;
 import x8sdk.update.FileUtil;
 
 import java.io.*;
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
@@ -137,7 +138,7 @@ public class FirmwareBuildPack {
                     FileChannel fc = new FileInputStream(fw.getFilename().toFile()).getChannel();
                     ByteBuffer bb = ByteBuffer.allocate(8192);
                     while (fc.read(bb) != -1) {
-                        bb.flip();
+                        ((Buffer)bb).flip();
                         outChannel.write(bb);
                         bb.clear();
                     }
