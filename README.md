@@ -2,8 +2,8 @@
 ### Generate sd-card-flashable fr_firmware.bin images for Fimi X8 SE
 
 ## About the way FIMI implemented the update procedure
-While updating the drone via the App, this is what actually happens in background:
-```
+*While updating the drone via the App, this is what actually happens in background:
+
  0. App querys firmware information from the drone.
  1. App querys firmware information from Fimi's backend api.
  2. App downloads all updated firmware images.
@@ -12,13 +12,12 @@ While updating the drone via the App, this is what actually happens in backgroun
  5. RC forwards firmware via FimiLink4 (propritary network protocol) in realtime to the drone.
  6. Either the drone (FC-Relay, OpenWRT system) or the camera (Ambarella A12, Linux + RTOS system) (I don't know which of both, here's some missing information) gets the firmware and passes it ultimately to the camera.
  7. Camera writes the firmware to the root of the sd-card as ``fr_firmware.bin`.
- 8. Drone restarts
+ 8. Drone restarts.
  9. Camera reads the firmware file during the next boot.
  10. Camera checks if ``fr_firmware.bin`` is correctly formatted and if the CRC32 checksum is correct.
  11. Camera unpacks all firmware images into the ``/fr_update`` subdirectory.
  12. Camera runs code to flash each part of the firmware individually. This takes a while an the drone is blinking and beeping wildly.
- 13. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted
- ```
+ 13. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted.
  
 
 ## Tutorial
