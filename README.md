@@ -11,7 +11,7 @@
  4. App sends ``all_chips.bin`` + a CRC32 checksum as a second file via USB to the RC.
  5. RC forwards firmware via FimiLink4 (propritary network protocol) in realtime to the drone.
  6. Either the drone (FC-Relay, OpenWRT system) or the camera (Ambarella A12, Linux + RTOS system) (I don't know which of both, here's some missing information) gets the firmware and passes it ultimately to the camera.
- 7. Camera writes the firmware to the root of the sd-card as ``fr_firmware.bin`.
+ 7. Camera writes the firmware to the root of the sd-card as ``fr_firmware.bin``.
  8. Drone restarts.
  9. Camera reads the firmware file during the next boot.
  10. Camera checks if ``fr_firmware.bin`` is correctly formatted and if the CRC32 checksum is correct.
@@ -19,8 +19,13 @@
  12. Camera runs code to flash each part of the firmware individually. This takes a while and the drone is blinking and beeping wildly. Depending on the firmware type (Gimbal, FC, FC-Relay) etc. the firmware is first transfered to another component of the drone (like FC-Relay) and the flashed by it.
  13. Camera deletes ``fr_firmware.bin`` file and the ``/fr_update`` directory.
  14. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted.
- 
 
+## How sd-card flashing works
+ 0. Download firmware JSON file. (automatic, if flashing latest available version)
+ 1. Download needed firmware images from directly FIMIs server or from my github repo. (automatic, if flashing latest available version)
+ 2. Generate the update package with this tool. 
+ 3. Place the update package as ``fr_firmware.bin`` and restart the drone. As from here the update procedure works the same as from step 9. when updating via App.
+ 
 ## Tutorial
 TODO
 
