@@ -26,7 +26,7 @@
  3. Generate the update package with this tool. 
  4. Place the update package as ``fr_firmware.bin`` and restart the drone. From now on it's like we updating from the App, but skipping steps 0 to 8.
  
-## Tutorial
+## General Information
 TODO
 
 
@@ -72,3 +72,16 @@ Stuff will be placed in fw-download folder by default, no firmware is generated:
 
   ``java -jar X8UpdateGenerator-1.0.jar -u gimbal esc fc``
 
+## Installation
+Not needed, you just need the Java (8 or greater) runtime installed. After cloning the repo or downloading the jar file, run it from the terminal like this:
+
+``java -jar X8UpdateGenerator-1.0.jar``
+
+### Build
+* **Linux/Unix**
+
+``./gradlew build``
+
+* **Windows**
+
+``gradle.bat build``
