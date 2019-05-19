@@ -3,6 +3,7 @@
 
 ## About the way FIMI implemented the update procedure
 While updating the drone via the App, this is what actually happens in background:
+```
  0. App querys firmware information from the drone.
  1. App querys firmware information from Fimi's backend api.
  2. App downloads all updated firmware images.
@@ -17,6 +18,7 @@ While updating the drone via the App, this is what actually happens in backgroun
  11. Camera unpacks all firmware images into the ``/fr_update`` subdirectory.
  12. Camera runs code to flash each part of the firmware individually. This takes a while an the drone is blinking and beeping wildly.
  13. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted
+ ```
  
 
 ## Tutorial
@@ -52,17 +54,17 @@ https://fimiapp-server-frankfurt.mi-ae.com.de/v3/firmware/getFirmwareDetail
  * Download JSON firmware file, parse it and download all current firmware images for the Fimi X8 SE.
 Stuff will be placed in fw-download folder by default, no firmware is generated:
 
-``java -jar X8UpdateGenerator-1.0.jar -i auto``
+  ``java -jar X8UpdateGenerator-1.0.jar -i auto``
 
 * Download JSON firmware file, parse it and download the current Gimbal firmware image. Then generate the fr_firmware.bin file for the Gimbal:
 
-``java -jar X8UpdateGenerator-1.0.jar -i auto -u gimbal``
+  ``java -jar X8UpdateGenerator-1.0.jar -i auto -u gimbal``
 
 * Use JSON firmware file from firmware folder (fw-download by default), download the current Gimbal firmware image (if not already downloaded). Then generate the fr_firmware.bin file for the Gimba and place it in the current working directory:
 
-``java -jar X8UpdateGenerator-1.0.jar -u gimbal``
+  ``java -jar X8UpdateGenerator-1.0.jar -u gimbal``
 
 * Same as above, but creates a multipart fr_firmware.bin (Gimbal, ESC, and FC) which will flash multiple firmware parts at once:
 
-``java -jar X8UpdateGenerator-1.0.jar -u gimbal esc fc``
+  ``java -jar X8UpdateGenerator-1.0.jar -u gimbal esc fc``
 
