@@ -21,10 +21,10 @@
  14. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted.
 
 ## How sd-card flashing works
- 0. Download firmware JSON file. (automatic, if flashing latest available version)
- 1. Download needed firmware images from directly FIMIs server or from my github repo. (automatic, if flashing latest available version)
- 2. Generate the update package with this tool. 
- 3. Place the update package as ``fr_firmware.bin`` and restart the drone. As from here the update procedure works the same as from step 9. when updating via App.
+ 1. Download firmware JSON file. (automatic, if flashing latest available version)
+ 2. Download needed firmware images from directly FIMIs server or from my github repo. (automatic, if flashing latest available version)
+ 3. Generate the update package with this tool. 
+ 4. Place the update package as ``fr_firmware.bin`` and restart the drone. From now on it's like we updating from the App, but skipping steps 0 to 8.
  
 ## Tutorial
 TODO
