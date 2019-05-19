@@ -78,6 +78,10 @@ Not needed, you just need the Java (8 or greater) runtime installed. After cloni
 ``gradle.bat build``
 
 
+
+The current firmware files are listed by the backend API here:
+https://fimiapp-server-frankfurt.mi-ae.com.de/v3/firmware/getFirmwareDetail
+
 ## Usage
 ### Arguments
 ```
@@ -102,8 +106,9 @@ Not needed, you just need the Java (8 or greater) runtime installed. After cloni
 ```
 
 ### Examples
- * Download JSON firmware file, parse it and download all current firmware images for the Fimi X8 SE.
-Stuff will be placed in fw-download folder by default, no firmware is generated:
+
+* Download JSON firmware file, parse it and download all current firmware images for the Fimi X8 SE. 
+ Stuff will be placed in fw-download folder by default, no firmware is generated:
 
   ``java -jar X8UpdateGenerator-1.0.jar -i auto``
 
