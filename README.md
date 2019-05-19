@@ -4,8 +4,8 @@
 ## General Information
 
 ### About this tool
-I got my new Fimi X8 SE and wanted to update it before the first flight. During the update the connection got lost and my drone got bricked: After boot the app was showing the "System is preparing" message and I couldn't fly or try to update again.
-So I reverse engineered the firmware files and Fimi Navi APK, found how to flash firmware with the sd-card and unbricked my drone with it (I'm still suprised and thankful that it actually worked). Now I want to share that knowledge with you :)
+I got my shiny new Fimi X8 SE and wanted to update it before the first flight. During the update the connection got lost and my drone got bricked: After boot, the app was showing the "System is preparing" error message and I couldn't fly or update again.
+So I reverse engineered the firmware files and Fimi Navi APK, found how to flash firmware using the sd-card and unbricked my drone with it (I'm still suprised and thankful that it actually worked). Now I want to share my knowledge with you :)
 
 ### Update / Downgrade
 It is possible to update or downgrade every part of the drone and remote control to any firmware version available.
