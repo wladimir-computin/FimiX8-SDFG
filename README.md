@@ -2,7 +2,7 @@
 ### Generate sd-card-flashable fr_firmware.bin images for Fimi X8 SE
 
 ## About the way FIMI implemented the update procedure
-*While updating the drone via the App, this is what actually happens in background:
+*While updating the drone via the App, this is what actually happens in the background:
 
  0. App querys firmware information from the drone.
  1. App querys firmware information from Fimi's backend api.
@@ -16,8 +16,9 @@
  9. Camera reads the firmware file during the next boot.
  10. Camera checks if ``fr_firmware.bin`` is correctly formatted and if the CRC32 checksum is correct.
  11. Camera unpacks all firmware images into the ``/fr_update`` subdirectory.
- 12. Camera runs code to flash each part of the firmware individually. This takes a while an the drone is blinking and beeping wildly.
- 13. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted.
+ 12. Camera runs code to flash each part of the firmware individually. This takes a while and the drone is blinking and beeping wildly.
+ 13. Camera deletes ``fr_firmware.bin`` file and the ``/fr_update`` directory.
+ 14. Progress is written into ``fr_update.log`` file, which can be read after the drone restarted.
  
 
 ## Tutorial
@@ -52,7 +53,6 @@ https://fimiapp-server-frankfurt.mi-ae.com.de/v3/firmware/getFirmwareDetail
 ### Examples
  * Download JSON firmware file, parse it and download all current firmware images for the Fimi X8 SE.
 Stuff will be placed in fw-download folder by default, no firmware is generated:
-
   ``java -jar X8UpdateGenerator-1.0.jar -i auto``
 
 * Download JSON firmware file, parse it and download the current Gimbal firmware image. Then generate the fr_firmware.bin file for the Gimbal:
