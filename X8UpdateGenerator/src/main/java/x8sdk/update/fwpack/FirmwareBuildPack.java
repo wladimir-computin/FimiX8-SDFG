@@ -140,7 +140,7 @@ public class FirmwareBuildPack {
                     while (fc.read(bb) != -1) {
                         ((Buffer)bb).flip();
                         outChannel.write(bb);
-                        bb.clear();
+                        ((Buffer)bb).clear();
                     }
                     fc.close();
                 } else {
