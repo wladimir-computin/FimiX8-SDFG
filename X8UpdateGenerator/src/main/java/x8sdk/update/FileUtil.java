@@ -1,6 +1,7 @@
 package x8sdk.update;
 
 import java.io.*;
+import java.nio.Buffer;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.file.Path;
@@ -105,9 +106,9 @@ public class FileUtil {
                 FileChannel fc = new FileInputStream(fw.toFile()).getChannel();
                 ByteBuffer bb = ByteBuffer.allocate(BUFSIZE);
                 while (fc.read(bb) != -1) {
-                    bb.flip();
+                    ((Buffer)bb).flip();
                     outChannel.write(bb);
-                    bb.clear();
+                    ((Buffer)bb).clear();
                 }
                 fc.close();
             }
