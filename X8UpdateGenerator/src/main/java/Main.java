@@ -103,7 +103,7 @@ public class Main {
             SimpleLogger.log(SimpleLogger.LogType.INFO, "No firmare JSON file specified, will try to find one in: " + fwfolder);
             try (Stream<Path> files = Files.walk(fwfolder)) {
                 List<Path> jsons = files
-                        .filter(f -> f.getFileName().toString().endsWith(".json"))
+                        .filter(f -> f.getFileName().toString().endsWith(".jfproj"))
                         .collect(Collectors.toList());
                 if(jsons.size() == 1){
                     inputfile = jsons.get(0);
