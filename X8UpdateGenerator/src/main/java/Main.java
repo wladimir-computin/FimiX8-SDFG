@@ -40,9 +40,9 @@ public class Main {
                 .dest("jsonfile")
                 .required(false)
                 .type(String.class)
-                .metavar("<path/to/file.json>")
+                .metavar("<path/to/file.jfproj>")
                 .setDefault("")
-                .help("Path to the firmware JSON file.\nPass \"auto\": download it automatically from FIMIs firmware server.\nOmit: search for *.json in <firmware folder>.");
+                .help("Path to the firmware JSON file.\nPass \"auto\": download it automatically from FIMIs firmware server.\nOmit: search for *.jfproj in <firmware folder>.");
 
         parser.addArgument("-u")
                 .dest("firmwaretypes")
