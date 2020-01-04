@@ -67,7 +67,7 @@ public class UpdateUtil {
 
     public static Path getFirmwareJsonFromServer(Path folder) throws Exception {
         InputStream in = new URL(fimi_api_url_de).openStream();
-        Path filename = Paths.get(folder.toString() + "/getFirmwareDetail.json");
+        Path filename = Paths.get(folder.toString() + "/getFirmwareDetail.jfproj");
         Files.copy(in, filename, StandardCopyOption.REPLACE_EXISTING);
         return filename;
     }
