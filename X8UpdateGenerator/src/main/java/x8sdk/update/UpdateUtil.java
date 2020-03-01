@@ -21,7 +21,7 @@ import java.util.List;
 
 public class UpdateUtil {
 
-    public static final String fimi_api_url_de = "https://fimiservice-newus.mi-ae.com/v3/firmware/getFirmwareDetail";
+    public static final String fimi_api_url_de = "http://paas-frankfurt.fimi.com/fimi-cms-web-interface/v3/firmware/getFirmwareDetail";
 
     public static List<UpfirewareDto> filterX8sFirmware(List<UpfirewareDto> list) {
         List<UpfirewareDto> upfirewareDtoList = new ArrayList();
