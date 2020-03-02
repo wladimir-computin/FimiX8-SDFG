@@ -7,6 +7,14 @@
 I got my shiny new Fimi X8 SE and wanted to update it before the first flight. During the update the connection got lost and my drone got bricked: After boot, the app was showing the "System is preparing" error message and I couldn't fly or update again.
 So I reverse engineered the firmware files and Fimi Navi APK, found how to flash firmware using the sd-card and unbricked my drone with it (I'm still suprised and thankful that it actually worked). Now I want to share my knowledge with you :)
 
+### Update 02.03.2020
+I wanted to upgrade my Fimi from an older firmware and, guess what, the update process via app stopped at 50% and said timeout.
+The RC was peeping for some time, I guess it lost connection or something.
+The drone bricked (of course), camera wasn't working properly and something was wrong with the Gimbal. No more updates possible, app told me that A12 (camera) wasn't connected, which it certainly was!
+
+Good news is, this tool still works! I created a ``fr_firmware.bin`` containing all the newest firmwares, put it on the sd-card, turned on the RC and the drone. It took some time, so be patient, don't turn it off for at least 10 minutes.
+The update process by FIMI is really fragile, I think I'm gonna stick to the sd-card method.
+
 ### How FIMI implemented the update procedure
 *While updating the drone via the App, this is what actually happens in the background:*
 
