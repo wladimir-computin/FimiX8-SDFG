@@ -42,7 +42,7 @@ There is a flag (forceSign=1 in the JSON file) which indicates the software to i
 **Attention:** Since the drone has many components with individual firmware for each of them, some firmware versions might not play nice with each other. In the worst case, this could even lead to a bricked drone, be warned! You are on the save side if you install the firmware versions which are known working together. See FIMI X8 FW UP-DATE spreadsheet by aiolosimport: https://docs.google.com/spreadsheets/d/1MghIcdNIom1Fj6nHkqPca1OvwRelI0lQ1QDUz1jvz4E
 
 The current firmware files are listed by the backend API here:
-https://fimiapp-server-frankfurt.mi-ae.com.de/v3/firmware/getFirmwareDetail
+http://paas-frankfurt.fimi.com/fimi-cms-web-interface/v3/firmware/getFirmwareDetail
 
 ### Flashing remote control
 Flashing the remote control (RC and RC-Relay) works exactly the same.
